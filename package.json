@@ -1,0 +1,22 @@
+{
+  "name": "smokesite",
+  "version": "1.0.0",
+  "description": "Portfolio Project Website for SmokePGH.com",
+  "main": "index.html",
+  "scripts": {
+    "lite": "lite-server",
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Drew Horner",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "bootstrap-social": "^5.1.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
