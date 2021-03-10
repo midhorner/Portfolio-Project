@@ -9,24 +9,249 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
   <!-- Additional CSS must be placed after Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
   <link rel="stylesheet" href="css/styles.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
 
   <title>Smoke Pittsburgh</title>
 </head>
 <body>
   <header>
-    <h1>SMOKE</h1>
+    
   </header>
 
-  <footer>
+  <nav class="navbar navbar-expand-lg sticky-top py-0">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="img/smokelogo.png" id="smoke-logo" height="100" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+          <span class="bars">
+            <span class="toggler-bar"></span>
+            <span class="toggler-bar"></span>
+            <span class="toggler-bar"></span>
+          </span>
+          <div class="close-icon py-1 hidden">✖</div>
+        </button>
+        <div class="collapse navbar-collapse" id="nucampNavbar">
+            <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item px-3"><a class="nav-link" id="about" href="#">About</a></li>
+                <li class="nav-item px-3"><a class="nav-link" id="menus" href="#">Menus</a></li>
+                <li class="nav-item px-3"><a class="nav-link" id="reservations" data-toggle="modal" data-target="#reservationModal" href="#">Reservations</a></li>
+                <li class="nav-item px-3"><a class="nav-link" id="events" data-toggle="modal" data-target="#eventsModal" href="#">Events</a></li>
+                <li class="nav-item px-3"><a class="nav-link" id="merch" href="#">Merch</a></li>  
+                <li class="nav-item px-3"><a class="nav-link p-2" id="order-online" href="http://smokepgh.com/s/order" target="_blank">Order Online</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-  </footer>
+<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header pb-0 text-center">
+        <h5 class="modal-title" id="reservationModalLabel">Make a Reservation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <form>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Name</small>
+                <input type="text" class="form-control" id="resName" placeholder="Name">
+              </div>
+              <div class="col">
+                <small class="hide">Party Size</small>
+                <select class="form-control" id="resPartySize">
+                  <option selected>Party Size...</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Date</small>
+                <input type="date" class="form-control" id="resDate" min="12:00" max="21:30">
+              </div>
+              <div class="col">
+                <small class="hide">Time: Noon to 9:30PM</small>
+                <input type="time" class="form-control" id="resTime">
+              </div>
+            </div>
+            <div class="form-group row">                  
+                <div class="col">
+                  <small class="hide">Email</small>
+                  <input type="email" class="form-control" id="resEmail" placeholder="Email">                      
+                </div>                  
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Additional Information</small>
+                <textarea class="form-control" id="resAdditionalInfo" rows="4" placeholder="List any special needs, allergies, etc..."></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col text-center">
+                  <button type="submit" class="btn btn-submit"> Submit </button>
+              </div>
+            </div>
+          </div>  
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="site-footer fixed-bottom">
+
+  <div class="container-fluid py-2">
+    <div class="row align-items-center">
+      <div class="col text-center text-md-left">
+        <a class="btn btn-social-icon btn-lg" href="http://instagram.com/smokepgh" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a class="btn btn-social-icon btn-lg" href="http://instagram.com/smokepgh" target="_blank"><i class="fab fa-squarespace"></i></a>          
+      </div>      
+      <div class="col-12 col-md text-center text-md-right">
+        <a class="nav-link d-inline" id="contact" data-toggle="modal" data-target="#contactModal" href="#">Contact</a>
+        <a class="nav-link d-inline" id="careers" data-toggle="modal" data-target="#careersModal" href="#">Careers</a>
+        <a class="nav-link d-inline" id="location" href="#">Location</a>
+      </div>
+    </div>
+  </div>  
+
+</footer>
+
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header pb-0 text-center">
+        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <form>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Name</small>
+                <input type="text" class="form-control" id="contactName" placeholder="Name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Email</small>
+                <input type="email" class="form-control" id="conatctEmail" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Phone Number</small>
+                <input type="tel" class="form-control" id="contactTel" placeholder="Phone Number">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">How can we help you?</small>
+                <textarea class="form-control" id="contactHelp" placeholder="How can we help you?" rows="4"></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col text-center">
+                  <button type="submit" class="btn btn-submit"> Submit </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="careersModal" tabindex="-1" aria-labelledby="careersModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header pb-0 text-center">
+        <h5 class="modal-title" id="careersModalLabel">Join Our Team!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <form>
+            <div class="form-group row mb-md-3 mb-0">
+              <div class="col-12 col-md">
+                <small class="hide">Name</small>
+                <input type="text" class="form-control" id="careersName" placeholder="Name">                
+              </div>
+              <div class="col-12 col-md">
+                <small class="hide">Email</small>
+                <input type="email" class="form-control" id="careersEmail" placeholder="Email">
+              </div>
+            </div>
+            
+            <div class="form-group row">
+              <div class="col-12 col-md">
+                <small class="hide">Phone Number</small>
+                <input type="tel" class="form-control" id="careersTel" placeholder="Phone Number">
+              </div>
+              <div class="col">
+                <small class="hide">Available Positions</small>
+                <select class="form-control" id="careersPosition">
+                  <option selected>Available Positions</option>
+                  <option value="2">Dishwasher</option>
+                  <option value="3">Line Cook</option>
+                  <option value="4">Prep Cook</option>
+                  <option value="5" disabled>Host</option>
+                  <option value="6">Busser</option>
+                  <option value="7">Server</option>
+                  <option value="8" disabled>Bartender</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Tell us about yourself.</small>
+                <textarea class="form-control" id="contactCoverLetter" placeholder="Cover Letter" rows="8"></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <label for="uploadResume">Upload your resumé.</label>
+                <input type="file" class="form-control-file" id="uploadResume">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col text-center">
+                  <button type="submit" class="btn btn-submit"> Submit </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   
   <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
 
 </body>
 </html>

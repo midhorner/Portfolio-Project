@@ -1,0 +1,95 @@
+body {
+  font-family: 'Shippori Mincho B1', serif;
+  background-color: rgb(199, 191, 191);
+}
+
+.navbar, .site-footer {
+  background-color: #354959;
+}
+
+.navbar-toggler:focus, 
+.navbar.toggler:active:focus, 
+.navbar-toggler.active:focus, 
+.btn:focus, .btn:active:focus, 
+.btn.active:focus, 
+.close:focus, 
+.close:active:focus, 
+.close.active:focus {
+  outline:none;
+  box-shadow:none;
+}
+
+.form-control:focus, 
+.form-control:active:focus,
+.form-control.active:focus {
+  border: solid rgb(155, 148, 87) 3px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-collapse.collapsing #order-online, .navbar-collapse.show #order-online {
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.navbar-toggler {
+  border: solid rgb(155, 148, 87) 2px !important;
+  color: rgb(155, 148, 87) !important;
+}
+
+.nav-link {
+  color: rgb(155, 148, 87) !important;
+  text-transform: uppercase;
+}
+
+.nav-link:hover, .btn-social-icon:hover {
+  color: rgb(133, 121, 51) !important;
+}
+
+.toggler-bar {
+  display: block;
+  width: 16px;
+  height: 2px;
+  margin: .35rem 0; 
+  background: rgb(156, 145, 47);
+  border-radius: 3px;
+  
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-content, .close {
+  background-color: #354959;
+  color: rgb(155, 148, 87) !important;
+}
+
+small.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-submit {
+  border: solid rgb(156, 145, 47);
+  color: rgb(156, 145, 47);
+  width: 10rem;
+}
+
+.btn-submit:hover {
+  background-color: rgb(156, 145, 47);
+  color: #354959;
+}
+
+.btn-submit:active {
+  transform: scale(.98);
+}
+
+@media only screen and (max-width: 360px) {
+  #smoke-logo {
+    height: 85px;
+  }
+}
