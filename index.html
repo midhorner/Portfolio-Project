@@ -49,7 +49,7 @@
 <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header pb-0 text-center">
+      <div class="modal-header">
         <h5 class="modal-title" id="reservationModalLabel">Make a Reservation</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -66,7 +66,7 @@
               <div class="col">
                 <small class="hide">Party Size</small>
                 <select class="form-control" id="resPartySize">
-                  <option selected>Party Size...</option>
+                  <option selected disabled>Party Size...</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
@@ -80,11 +80,34 @@
             <div class="form-group row">
               <div class="col">
                 <small class="hide">Date</small>
-                <input type="date" class="form-control" id="resDate" min="12:00" max="21:30">
+                <input type="date" class="form-control" id="resDate">
               </div>
               <div class="col">
-                <small class="hide">Time: Noon to 9:30PM</small>
-                <input type="time" class="form-control" id="resTime">
+                <small class="hide">Time</small>
+                <select class="form-control" id="resStartTime">
+                  <Option selected disabled>Time</Option>
+                  <option>Noon</option>
+                  <option>12:30PM</option>
+                  <option>1:00PM</option>
+                  <option>1:30Pm</option>
+                  <option>2:00PM</option>
+                  <option>2:30PM</option>
+                  <option>3:00PM</option>
+                  <option>3:30PM</option>
+                  <option>4:00PM</option>
+                  <option>4:30PM</option>
+                  <option>5:00PM</option>
+                  <option>5:30PM</option>
+                  <option>6:00PM</option>
+                  <option>6:30PM</option>
+                  <option>7:00PM</option>
+                  <option>7:30PM</option>
+                  <option>8:00PM</option>
+                  <option>8:30PM</option>
+                  <option>9:00PM</option>
+                  <option>9:30PM</option>
+                  <option>10:00PM</option>
+                </select>
               </div>
             </div>
             <div class="form-group row">                  
@@ -104,15 +127,306 @@
                   <button type="submit" class="btn btn-submit"> Submit </button>
               </div>
             </div>
-          </div>  
           </form>
+        </div>         
       </div>
     </div>
   </div>
 </div>
 
+<div class="modal fade" id="eventsModal" tabindex="-1" aria-labelledby="eventsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="eventsModalLabel">Private Events</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row text-center mb-3" id="typeOfEvent">
+            <div class="col">
+              <h5>Is this a catered event or are we hosting you?</h3>
+            </div>
+          </div>
+          <div class="row text-center" id="eventsButtons">
+            <div class="col mb-3">
+              <button class="btn btn-submit" id="cateringButton">Catering</button>
+            </div>
+            <div class="col mb-3">
+              <button class="btn btn-submit" id="hostingButton">Hosted Event</button>
+            </div>
+          </div>
+          <form class="catered-event hidden">
+            <button type="button" class="close" id="catered-choice" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h5>Catering</h5>
+            <h6 class="text-center"><a href="/img/CateringMenu.pdf" download class="menu-link pt-1 pb-2 px-2 rounded-pill">Catering Menu</a></h6>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Name</small>
+                <input type="text" class="form-control" id="cateredName" placeholder="Name">
+              </div>
+              <div class="col">
+                <small class="hide">Email</small>
+                <input type="email" class="form-control" id="cateredEmail" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Phone Number</small>
+                <input type="tel" class="form-control" id="cateredTel" placeholder="Phone Number">
+              </div>
+              <div class="col">
+                <small class="hide">Address (on-site only)</small>
+                <input class="form-control" id="cateredAddress" placeholder="Address">
+              </div>
+            </div>  
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Date</small>
+                <input type="date" class="form-control" id="cateredDate">
+              </div>
+              <div class="col">
+                <small class="hide">Time</small>
+                <select class="form-control" id="cateredStartTime">
+                  <Option selected disabled>Time</Option>
+                  <option>Noon</option>
+                  <option>12:30PM</option>
+                  <option>1:00PM</option>
+                  <option>1:30Pm</option>
+                  <option>2:00PM</option>
+                  <option>2:30PM</option>
+                  <option>3:00PM</option>
+                  <option>3:30PM</option>
+                  <option>4:00PM</option>
+                  <option>4:30PM</option>
+                  <option>5:00PM</option>
+                  <option>5:30PM</option>
+                  <option>6:00PM</option>
+                  <option>6:30PM</option>
+                  <option>7:00PM</option>
+                  <option>7:30PM</option>
+                  <option>8:00PM</option>
+                  <option>8:30PM</option>
+                  <option>9:00PM</option>
+                  <option>9:30PM</option>
+                  <option>10:00PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row text-center">
+              <div class="col">
+                <div class="form-check form-check-inline">
+                  <input type="radio" class="form-check-input" id="cateringPickup" name="cateringRadios" value="pickup" />
+                  <label class="form-check-label" for="contactYes">Pick Up</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="cateringOnSite" name="cateringRadios" value="on-site" />
+                    <label class="form-check-label" for="contactNo">On Site Delivery</label>
+                </div>
+              </div>              
+            </div>
+            <div class="form-group row justify-content-center text-center hidden" id="cateringNeeds">
+              <div class="col-12">
+                <h6 class="mb-3">Tell us what you'll need </br>(check all that apply)</h6>
+              </div>
+              <div class="col-8">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="tables" value="tables">
+                  <label class="form-check-label" for="tables">Table(s)</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="tableCloths" value="table-cloths">
+                  <label class="form-check-label" for="tableCloths">Table Cloths</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="chafingPans" value="chafing-pans">
+                  <label class="form-check-label" for="chafingPans">Chafing Pans</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="plates" value="plates">
+                  <label class="form-check-label" for="plates">Plates and Bowls</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="glasses" value="glasses">
+                  <label class="form-check-label" for="glasses">Glasses and Cups</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="silverware" value="silverware">
+                  <label class="form-check-label" for="silverware">Forks, Knives, & Spoons</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="staff" value="staff">
+                  <label class="form-check-label" for="staff">Staff</label>
+                </div>
+              </div>
+            </div>
 
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Type your order below</small>
+                <textarea class="form-control" id="cateredAdditionalInfo" rows="2" placeholder="Tell us what you'd like"></textarea>
+              </div>
+            </div>
 
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Additional Information</small>
+                <textarea class="form-control" id="cateredAdditionalInfo" rows="4" placeholder="List any special needs, allergies, etc..."></textarea>
+              </div>
+            </div>            
+
+            <div class="form-group row">
+              <div class="col text-center">
+                  <button type="submit" class="btn btn-submit"> Submit </button>
+              </div>
+            </div>
+                      
+          </form>
+
+          <form class="hosted-event hidden">
+            <button type="button" class="close" id="hosted-choice" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h5>Hosted Event</h5>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Contact Name</small>
+                <input type="text" class="form-control" id="hostedName" placeholder="Contact Name">
+              </div>
+              <div class="col">
+                <small class="hide">Company or Organization</small>
+                <input type="text" class="form-control" id="hostedCompany" placeholder="Company or Organization">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Email</small>
+                <input type="email" class="form-control" id="hostedEmail" placeholder="Email">
+              </div>
+              <div class="col">
+                <small class="hide">Phone Number</small>
+                <input type="tel" class="form-control" id="hostedTel" placeholder="Phone Number">
+              </div>
+            </div>
+            <div class="form-group row">           
+                <div class="col">
+                  <small class="hide">Type Of Event</small>
+                  <select class="form-control" id="hostedType">
+                    <option selected disabled>Type of Event</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="holiday">Holiday</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="corporate">Corporate</option>
+                    <option value="bach">Bachelor / Bachelorette</option>
+                    <option value="rehersal">Rehersal Dinner</option>
+                    <option value="shower">Shower</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <small class="hide">Date</small>
+                  <input type="date" class="form-control" id="hostedDate">
+                </div>              
+            </div>
+            <div class="form-group row">
+              <div class="col-12">
+                <h6 class="size-warning hidden mb-0">Parties of 22 or more will require renting the entire restaurant.</h6>
+              </div>
+              <div class="col mt-4">
+                22 or more in your party?
+                <div class="form-check form-check-inline">
+                  <input type="radio" class="form-check-input" id="rentingYes" name="rentingRadios" value="yes" />
+                  <label class="form-check-label" for="contactYes">YES</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="rentingNo" name="rentingRadios" value="no" />
+                    <label class="form-check-label" for="contactNo">NO</label>
+                </div>
+              </div>
+              <div class="col">
+                <small class="hide">Number of Guests (up to 44)</small>
+                <input class="form-control" type="num" id="hosetedNumber" placeholder="Number of Guests">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Start Time</small>
+                <select class="form-control" id="hostedStartTime">
+                  <Option selected disabled>Start Time</Option>
+                  <option>Noon</option>
+                  <option>12:30PM</option>
+                  <option>1:00PM</option>
+                  <option>1:30Pm</option>
+                  <option>2:00PM</option>
+                  <option>2:30PM</option>
+                  <option>3:00PM</option>
+                  <option>3:30PM</option>
+                  <option>4:00PM</option>
+                  <option>4:30PM</option>
+                  <option>5:00PM</option>
+                  <option>5:30PM</option>
+                  <option>6:00PM</option>
+                  <option>6:30PM</option>
+                  <option>7:00PM</option>
+                  <option>7:30PM</option>
+                  <option>8:00PM</option>
+                  <option>8:30PM</option>
+                  <option>9:00PM</option>
+                  <option>9:30PM</option>
+                  <option>10:00PM</option>                  
+                </select>
+              </div>
+              <div class="col">
+                <small class="hide">End Time</small>
+                <select class="form-control" id="hostedEndTime">
+                  <Option selected disabled>End Time</Option>
+                  <option>1:00PM</option>
+                  <option>1:30Pm</option>
+                  <option>2:00PM</option>
+                  <option>2:30PM</option>
+                  <option>3:00PM</option>
+                  <option>3:30PM</option>
+                  <option>4:00PM</option>
+                  <option>4:30PM</option>
+                  <option>5:00PM</option>
+                  <option>5:30PM</option>
+                  <option>6:00PM</option>
+                  <option>6:30PM</option>
+                  <option>7:00PM</option>
+                  <option>7:30PM</option>
+                  <option>8:00PM</option>
+                  <option>8:30PM</option>
+                  <option>9:00PM</option>
+                  <option>9:30PM</option>
+                  <option>10:00PM</option> 
+                  <option>10:30PM</option> 
+                  <option>11:00PM</option>                
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <small class="hide">Additional Information</small>
+                <textarea class="form-control" id="hostedAdditionalInfo" rows="4" placeholder="List any special needs, allergies, etc..."></textarea>
+              </div>
+            </div>
+            
+
+            <div class="form-group row">
+              <div class="col text-center">
+                  <button type="submit" class="btn btn-submit"> Submit </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer class="site-footer fixed-bottom">
 
@@ -135,7 +449,7 @@
 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header pb-0 text-center">
+      <div class="modal-header">
         <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -183,7 +497,7 @@
 <div class="modal fade" id="careersModal" tabindex="-1" aria-labelledby="careersModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
-      <div class="modal-header pb-0 text-center">
+      <div class="modal-header">
         <h5 class="modal-title" id="careersModalLabel">Join Our Team!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -211,7 +525,7 @@
               <div class="col">
                 <small class="hide">Available Positions</small>
                 <select class="form-control" id="careersPosition">
-                  <option selected>Available Positions</option>
+                  <option selected disabled>Available Positions</option>
                   <option value="2">Dishwasher</option>
                   <option value="3">Line Cook</option>
                   <option value="4">Prep Cook</option>
@@ -237,7 +551,7 @@
             </div>
             <div class="form-group row">
               <div class="col text-center">
-                  <button type="submit" class="btn btn-submit"> Submit </button>
+                  <button type="submit" class="btn btn-submit"> Apply </button>
               </div>
             </div>
           </form>

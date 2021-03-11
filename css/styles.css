@@ -4,7 +4,7 @@ body {
 }
 
 .navbar, .site-footer {
-  background-color: #354959;
+  background-color: #1c374e;
 }
 
 .navbar-toggler:focus, 
@@ -22,9 +22,13 @@ body {
 .form-control:focus, 
 .form-control:active:focus,
 .form-control.active:focus {
-  border: solid rgb(155, 148, 87) 3px !important;
+  border: solid rgb(156, 145, 47) 3px !important;
   outline: none !important;
   box-shadow: none !important;
+}
+
+select {
+  padding-top: .15rem !important;
 }
 
 .navbar-collapse.collapsing #order-online, .navbar-collapse.show #order-online {
@@ -36,17 +40,28 @@ body {
 }
 
 .navbar-toggler {
-  border: solid rgb(155, 148, 87) 2px !important;
-  color: rgb(155, 148, 87) !important;
+  border: solid rgb(156, 145, 47) 2px !important;
+  color: rgb(156, 145, 47) !important;
 }
 
 .nav-link {
-  color: rgb(155, 148, 87) !important;
+  color: rgb(156, 145, 47) !important;
   text-transform: uppercase;
 }
 
 .nav-link:hover, .btn-social-icon:hover {
   color: rgb(133, 121, 51) !important;
+}
+
+.menu-link {
+  color: rgb(156, 145, 47);
+  border: solid rgb(156, 145, 47) 2px;
+}
+
+.menu-link:hover {
+  text-decoration: none;
+  background-color: rgb(156, 145, 47);
+  color: #354959;
 }
 
 .toggler-bar {
@@ -60,12 +75,12 @@ body {
 }
 
 .modal-header {
-  border: none;
+  border-bottom: solid rgb(156, 145, 47) 2px;
 }
 
 .modal-content, .close {
-  background-color: #354959;
-  color: rgb(155, 148, 87) !important;
+  background-color: #1c374e;
+  color: rgb(156, 145, 47) !important;
 }
 
 small.hide {
@@ -76,7 +91,7 @@ small.hide {
 .btn-submit {
   border: solid rgb(156, 145, 47);
   color: rgb(156, 145, 47);
-  width: 10rem;
+  min-width: 10rem;
 }
 
 .btn-submit:hover {
@@ -87,6 +102,7 @@ small.hide {
 .btn-submit:active {
   transform: scale(.98);
 }
+
 
 @media only screen and (max-width: 360px) {
   #smoke-logo {
