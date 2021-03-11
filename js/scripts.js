@@ -21,16 +21,16 @@ function cateredEvent() {
   $("#typeOfEvent").toggleClass("hidden");
 }
 
-$(function(){
-  $("#cateringButton").click(cateredEvent);
-  $("#hostingButton").click(hostedEvent);
-});
-
 function hostedEvent() {
   $("#eventsButtons").toggleClass("hidden");
   $(".hosted-event").toggleClass("hidden");
   $("#typeOfEvent").toggleClass("hidden");
 }
+
+$(function(){
+  $("#cateringButton").click(cateredEvent);
+  $("#hostingButton").click(hostedEvent);
+});
 
 $(function(){
   $("#catered-choice").click(cateredEvent);
