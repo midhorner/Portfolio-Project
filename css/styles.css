@@ -1,6 +1,6 @@
 body {
   font-family: 'Shippori Mincho B1', serif;
-  background-color: rgb(199, 191, 191);
+  background-color: rgb(224, 224, 224);
 }
 
 .navbar, .site-footer {
@@ -44,7 +44,7 @@ select {
   color: rgb(156, 145, 47) !important;
 }
 
-.nav-link {
+.nav-link, .btn-social-icon {
   color: rgb(156, 145, 47) !important;
   text-transform: uppercase;
 }
@@ -105,6 +105,26 @@ small.hide {
 
 .form-group.row {
   margin-bottom: 0;
+}
+
+#orderOnline {
+  background-color: rgb(156, 145, 47);
+  color: #354959 !important;
+  border-radius: .25rem;
+  width: fit-content;
+}
+
+.misc-links {
+  color: #212529;
+}
+
+.misc-links:hover {
+  text-decoration: none;
+  color: #3c5772;
+}
+
+.clear {
+  height: 100px;
 }
 
 @media only screen and (max-width: 360px) {
