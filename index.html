@@ -59,11 +59,11 @@
         <div class="container-fluid">
           <form>
             <div class="form-group row">
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Name</small>
                 <input type="text" class="form-control" id="resName" placeholder="Name">
               </div>
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Party Size</small>
                 <select class="form-control" id="resPartySize">
                   <option selected disabled>Party Size...</option>
@@ -78,18 +78,18 @@
               </div>
             </div>
             <div class="form-group row">
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Date</small>
                 <input type="date" class="form-control" id="resDate">
               </div>
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Time</small>
                 <select class="form-control" id="resStartTime">
                   <Option selected disabled>Time</Option>
                   <option>Noon</option>
                   <option>12:30PM</option>
                   <option>1:00PM</option>
-                  <option>1:30Pm</option>
+                  <option>1:30PM</option>
                   <option>2:00PM</option>
                   <option>2:30PM</option>
                   <option>3:00PM</option>
@@ -122,7 +122,7 @@
                 <textarea class="form-control" id="resAdditionalInfo" rows="4" placeholder="List any special needs, allergies, etc..."></textarea>
               </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row mt-3">
               <div class="col text-center">
                   <button type="submit" class="btn btn-submit"> Submit </button>
               </div>
@@ -135,7 +135,7 @@
 </div>
 
 <div class="modal fade" id="eventsModal" tabindex="-1" aria-labelledby="eventsModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="eventsModalLabel">Private Events</h5>
@@ -162,41 +162,41 @@
             <button type="button" class="close" id="catered-choice" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-            <h5>Catering</h5>
-            <h6 class="text-center"><a href="/img/CateringMenu.pdf" download class="menu-link pt-1 pb-2 px-2 rounded-pill">Catering Menu</a></h6>
+            <h5 class="mb-4 mb-md-0">Catering</h5>
+            <div class="text-center"><a href="/img/CateringMenu.pdf" download class="menu-link pt-1 pb-2 px-2 rounded-pill">Catering Menu</a></div>
             <div class="form-group row">
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Name</small>
                 <input type="text" class="form-control" id="cateredName" placeholder="Name">
               </div>
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Email</small>
                 <input type="email" class="form-control" id="cateredEmail" placeholder="Email">
               </div>
             </div>
             <div class="form-group row">
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Phone Number</small>
                 <input type="tel" class="form-control" id="cateredTel" placeholder="Phone Number">
               </div>
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Address (on-site only)</small>
                 <input class="form-control" id="cateredAddress" placeholder="Address">
               </div>
             </div>  
             <div class="form-group row">
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Date</small>
                 <input type="date" class="form-control" id="cateredDate">
               </div>
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Time</small>
                 <select class="form-control" id="cateredStartTime">
                   <Option selected disabled>Time</Option>
                   <option>Noon</option>
                   <option>12:30PM</option>
                   <option>1:00PM</option>
-                  <option>1:30Pm</option>
+                  <option>1:30PM</option>
                   <option>2:00PM</option>
                   <option>2:30PM</option>
                   <option>3:00PM</option>
@@ -217,23 +217,23 @@
                 </select>
               </div>
             </div>
-            <div class="form-group row text-center">
+            <div class="form-group row text-center mt-3">
               <div class="col">
                 <div class="form-check form-check-inline">
                   <input type="radio" class="form-check-input" id="cateringPickup" name="cateringRadios" value="pickup" />
-                  <label class="form-check-label" for="contactYes">Pick Up</label>
+                  <label class="form-check-label" for="cateringPickup">Pick Up</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input type="radio" class="form-check-input" id="cateringOnSite" name="cateringRadios" value="on-site" />
-                    <label class="form-check-label" for="contactNo">On Site Delivery</label>
+                    <label class="form-check-label" for="cateringOnSite">On Site Delivery</label>
                 </div>
               </div>              
             </div>
-            <div class="form-group row justify-content-center text-center hidden" id="cateringNeeds">
-              <div class="col-12">
+            <div class="form-group row text-md-center mt-3 hidden" id="cateringNeeds">
+              <div class="col-12 text-center">
                 <h6 class="mb-3">Tell us what you'll need </br>(check all that apply)</h6>
               </div>
-              <div class="col-8">
+              <div class="col-12">
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="checkbox" id="tables" value="tables">
                   <label class="form-check-label" for="tables">Table(s)</label>
@@ -256,7 +256,7 @@
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="checkbox" id="silverware" value="silverware">
-                  <label class="form-check-label" for="silverware">Forks, Knives, & Spoons</label>
+                  <label class="form-check-label" for="silverware">Flatware</label>
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="checkbox" id="staff" value="staff">
@@ -264,27 +264,23 @@
                 </div>
               </div>
             </div>
-
             <div class="form-group row">
               <div class="col">
                 <small class="hide">Type your order below</small>
                 <textarea class="form-control" id="cateredAdditionalInfo" rows="2" placeholder="Tell us what you'd like"></textarea>
               </div>
             </div>
-
             <div class="form-group row">
               <div class="col">
                 <small class="hide">Additional Information</small>
                 <textarea class="form-control" id="cateredAdditionalInfo" rows="4" placeholder="List any special needs, allergies, etc..."></textarea>
               </div>
-            </div>            
-
-            <div class="form-group row">
+            </div>
+            <div class="form-group row mt-3">
               <div class="col text-center">
                   <button type="submit" class="btn btn-submit"> Submit </button>
               </div>
-            </div>
-                      
+            </div>                      
           </form>
 
           <form class="hosted-event hidden">
@@ -293,27 +289,27 @@
             </button>
             <h5>Hosted Event</h5>
             <div class="form-group row">
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Contact Name</small>
                 <input type="text" class="form-control" id="hostedName" placeholder="Contact Name">
               </div>
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Company or Organization</small>
                 <input type="text" class="form-control" id="hostedCompany" placeholder="Company or Organization">
               </div>
             </div>
             <div class="form-group row">
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Email</small>
                 <input type="email" class="form-control" id="hostedEmail" placeholder="Email">
               </div>
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Phone Number</small>
                 <input type="tel" class="form-control" id="hostedTel" placeholder="Phone Number">
               </div>
             </div>
             <div class="form-group row">           
-                <div class="col">
+                <div class="col-md-6">
                   <small class="hide">Type Of Event</small>
                   <select class="form-control" id="hostedType">
                     <option selected disabled>Type of Event</option>
@@ -327,33 +323,33 @@
                     <option value="other">Other</option>
                   </select>
                 </div>
-                <div class="col">
+                <div class="col-md-6">
                   <small class="hide">Date</small>
                   <input type="date" class="form-control" id="hostedDate">
                 </div>              
             </div>
             <div class="form-group row">
               <div class="col-12">
-                <h6 class="size-warning hidden mb-0">Parties of 22 or more will require renting the entire restaurant.</h6>
+                <h6 class="size-warning hidden mb-0 mt-4">Parties of 22 or more will require renting the entire restaurant.</h6>
               </div>
-              <div class="col mt-4">
+              <div class="col-md-6 mt-4">
                 22 or more in your party?
                 <div class="form-check form-check-inline">
                   <input type="radio" class="form-check-input" id="rentingYes" name="rentingRadios" value="yes" />
-                  <label class="form-check-label" for="contactYes">YES</label>
+                  <label class="form-check-label" for="rentingYes">YES</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input type="radio" class="form-check-input" id="rentingNo" name="rentingRadios" value="no" />
-                    <label class="form-check-label" for="contactNo">NO</label>
+                    <label class="form-check-label" for="rentingNo">NO</label>
                 </div>
               </div>
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Number of Guests (up to 44)</small>
                 <input class="form-control" type="num" id="hosetedNumber" placeholder="Number of Guests">
               </div>
             </div>
             <div class="form-group row">
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">Start Time</small>
                 <select class="form-control" id="hostedStartTime">
                   <Option selected disabled>Start Time</Option>
@@ -380,7 +376,7 @@
                   <option>10:00PM</option>                  
                 </select>
               </div>
-              <div class="col">
+              <div class="col-md-6">
                 <small class="hide">End Time</small>
                 <select class="form-control" id="hostedEndTime">
                   <Option selected disabled>End Time</Option>
@@ -414,14 +410,13 @@
                 <textarea class="form-control" id="hostedAdditionalInfo" rows="4" placeholder="List any special needs, allergies, etc..."></textarea>
               </div>
             </div>
-            
-
-            <div class="form-group row">
+            <div class="form-group row mt-3">
               <div class="col text-center">
                   <button type="submit" class="btn btn-submit"> Submit </button>
               </div>
             </div>
           </form>
+
         </div>
       </div>
     </div>
@@ -482,7 +477,7 @@
                 <textarea class="form-control" id="contactHelp" placeholder="How can we help you?" rows="4"></textarea>
               </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row mt-3">
               <div class="col text-center">
                   <button type="submit" class="btn btn-submit"> Submit </button>
               </div>
@@ -543,13 +538,13 @@
                 <textarea class="form-control" id="contactCoverLetter" placeholder="Cover Letter" rows="8"></textarea>
               </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row mt-2">
               <div class="col">
                 <label for="uploadResume">Upload your resumé.</label>
                 <input type="file" class="form-control-file" id="uploadResume">
               </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row mt-3">
               <div class="col text-center">
                   <button type="submit" class="btn btn-submit"> Apply </button>
               </div>

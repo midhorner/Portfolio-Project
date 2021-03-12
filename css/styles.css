@@ -103,6 +103,9 @@ small.hide {
   transform: scale(.98);
 }
 
+.form-group.row {
+  margin-bottom: 0;
+}
 
 @media only screen and (max-width: 360px) {
   #smoke-logo {
