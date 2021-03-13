@@ -115,15 +115,23 @@ small.hide {
 }
 
 .misc-links {
-  color: #212529;
+  color: #4271a0;
+  border-bottom: solid #4271a0 1px;
 }
 
 .misc-links:hover {
   text-decoration: none;
   color: #3c5772;
+  border-bottom: solid #3c5772 1px;
 }
 
 .clear {
+  clear: both;
+  height: 100px;
+}
+
+.space {
+  clear: both;
   height: 100px;
 }
 
