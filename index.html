@@ -35,38 +35,74 @@
         </button>
         <div class="collapse navbar-collapse" id="nucampNavbar">
             <ul class="navbar-nav ml-auto text-center">
-                <!-- <li class="nav-item px-3"><a class="nav-link" id="aboutLink" href="#about">About</a></li> -->
-                <li class="nav-item px-3"><a class="nav-link" id="menusLink" href="#">Menus</a></li>
+                <li class="nav-item px-3"><a class="nav-link" id="aboutLink" href="#about">About</a></li>
+                <li class="nav-item px-3"><a class="nav-link" id="menusLink" href="#menus">Menus</a></li>
                 <li class="nav-item px-3"><a class="nav-link" id="reservationsLink" data-toggle="modal" data-target="#reservationModal" href="#">Reservations</a></li>
                 <li class="nav-item px-3"><a class="nav-link" id="eventsLink" data-toggle="modal" data-target="#eventsModal" href="#">Events</a></li>
-                <li class="nav-item px-3"><a class="nav-link" id="merchLink" href="#">Merch</a></li>  
+                <li class="nav-item px-3"><a class="nav-link" id="merchLink" href="#merch">Merch</a></li>  
                 <li class="nav-item px-3 mx-auto mb-3 mb-lg-0"><a class="nav-link p-2" id="orderOnline" href="http://smokepgh.com/s/order" target="_blank">Order Online</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="container" id="about">
-  <div class="row mt-5 align-items-center">
-    <div class="col-lg-6 text-center">
+<div class="container-fluid">
+  <div class="row" id="splash">
+    <div class="col m-auto text-center">
       <img src="img/Goatfam.png" class="img-fluid" alt="goat-fam">
       <br>
-      <cite>Established 2011</cite>          
-    </div>   
-    <div class="col text-center mt-3">
-      
-      <h2>Housemade Everything.</h2>      
-      <h5>We are currently take out only.</h5>
-      <div><a class="misc-links" href="http://smokepgh.com/s/order" target="_blank">Order Online</a></div>
-      <div><a class="misc-links" href="https://www.ubereats.com/" target="_blank">Uber Eats</a></div>
-      <div><a class="misc-links" href="https://www.doordash.com/" target="_blank">Doordash</a></div>
-      <div><a class="misc-links" href="tel:412-852-2726">412-852-2726</a></div>      
+      <cite class="text-white">Established 2011</cite>           
     </div>
-    
+  </div>   
+</div>
+
+<div class="container">
+  <div class="row" id="about">
+    <div class="col">
+      <div class="space"></div>
+    </div>
   </div>
 </div>
 
 <div class="container">
+  <div class="row mb-5">
+    <div class="col text-center my-3">           
+      <h3>We are currently take out only.</h5>
+      <div class="row justify-content-center">
+        <div class="col-lg-2"><a class="order-links" href="http://smokepgh.com/s/order" target="_blank">Order Online</a></div>
+        <div class="col-lg-2"><a class="order-links" href="https://www.ubereats.com/" target="_blank">Uber Eats</a></div>
+        <div class="col-lg-2"><a class="order-links" href="https://www.doordash.com/" target="_blank">Doordash</a></div>
+        <div class="col-lg-2"><a class="order-links" href="tel:412-852-2726">412-852-2726</a></div>
+      </div>      
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col-lg-6">
+      <img src="img/betterfrontofrestaurant.jpg" class="img-fluid" alt="">
+    </div>
+    <div class="col-lg-6 mt-3 mt-lg-0">
+      <h3>Housemade Everything.</h3>
+      <p>We make everything from scratch. All dressings, mayos, and sauces are made in our kitchen. Piedmontese Brisket, Berkshire Pork & Freebird chicken are smoked in house using hickory, maple, oak, and cherry. Our tortillas are made by hand everyday. The buttermilk flour tortillas contain lard so are not vegetarian. The corn tortillas, also made by hand, do not contain any gluten or animal product. The food is bomb - hope you dig it.</p>
+      <p>
+        Monday: Closed
+        <br>
+        Tuesday: Closed
+        <br>
+        Wednesday: Closed
+        <br>
+        Thursday: Noon - 8:00PM
+        <br>
+        Friday: Noon - 8:00PM
+        <br>
+        Saturday: Noon - 8:00PM
+        <br>
+        Sunday: 10:00AM - 6:00PM
+      </p>
+    </div>
+  </div>   
+</div>
+
+<div class="container" id="menus">
   <div class="row">
     <div class="col">
       <div class="space"></div>
@@ -74,23 +110,28 @@
   </div>
 </div>
 
-<div class="container" id="featuredItems">
+<div class="container">
   <div class="row">
-    <div class="col-lg-6 text-center text-md-left">
-      <h4>Featured Tacos</h4>
-      <div>National Ultimate Chicken* Week is finally back!</div>
-      <cite><small>*Ultimate Chicken is our signature smoked then fried FreeBird chicken breast.</small></cite>
+    <div class="col-12 text-center mb-3 mt-2">
+      <h2>Featured Tacos</h4>
+      <h4>National Ultimate Chicken* Week is finally here!</h4>
+      <small><a class="misc-links" href="https://www.smokepgh.com/s/order?location=11eab7199b39ff8185260cc47a2b63ac#23" target="_blank">&#187 ORDER HERE</a></small>
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col-lg-6 text-center mt-3 mt-lg-0">
+      <cite><small>*Ultimate Chicken is our signature smoked then fried <a class="misc-links" href="https://www.freebirdchicken.com/" target="_blank">FreeBird</a> chicken breast.</small></cite>
       <div class="card mt-3">
         <div class="row no-gutters align-items-center">
           <div class="col-md-4 col-lg-5 col-xl-4">
             <img src="img/ultimate-chicken.jpg" class="card-img img-fluid" alt="...">
           </div>
           <div class="col">
-            <div class="card-body">
+            <div class="card-body text-lg-left">
               <div class="card-title mb-0"><strong>OG Ultimate</strong></div>
               <div class="card-text">
-                <small>w/ cheddar cheese, housemade bacon, sautéed red onions, fresno mayo, cilantro</small>
-            </div>
+                  <small>w/ cheddar cheese, housemade bacon, sautéed red onions, fresno mayo, cilantro</small>
+              </div>
             </div>
           </div>
         </div>
@@ -102,7 +143,7 @@
             <img src="img/hot-ultimate.jpg" class="card-img img-fluid" alt="...">
           </div>
           <div class="col">
-            <div class="card-body">
+            <div class="card-body text-lg-left">
               <div class="card-title mb-0"><strong>HOT Ultimate</strong></div>
               <div class="card-text">
                 <small>w/ bleu cheese dressing, HOT wing sauce, chives</small>
@@ -118,7 +159,7 @@
             <img src="img/chicken-chorizo.jpg" class="card-img img-fluid" alt="...">
           </div>
           <div class="col">
-            <div class="card-body">
+            <div class="card-body text-lg-left">
               <div class="card-title mb-0"><strong>Ultimate Chicken & Chorizo</strong></div>
               <div class="card-text">
                 <small>w/ chile de árbol, cheese sauce, housemade chorizo, crispies, cilantro</small>
@@ -127,9 +168,146 @@
           </div>
         </div>
       </div>
-
+    </div>
+      
+    <div class="col-lg-6 d-none d-md-block order-first order-lg-last">
+        <img src="img/lasttaco.jpg" class="img-fluid" alt="">
     </div>
   </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="space"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 text-center mb-3">
+      <h2>Cocktails TO GO</h4>
+        <small><a class="misc-links" href="https://www.smokepgh.com/s/order?location=11eab7199b39ff8185260cc47a2b63ac#7" target="_blank">&#187 ORDER HERE</a></small>
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col-lg-6 text-center">
+      <cite>32oz Jugs available now!</cite>
+      <img src="img/cocktailstogo.jpg" class="img-fluid mt-3" alt="">
+    </div>
+    <div class="col-lg-6 text-center mt-3 mt-lg-0">
+      <h4>It's Negroni Week* again!</h4>
+      <cite><small>*All proceeds from <a class="misc-links" href="https://negroniweek.com/donation/" target="_blank">Negroni Week</a> benefit <a class="misc-links" href="https://www.thinkingoutsidethecage.org/" target="_blank">Animal Friends</a></small></cite>
+      
+      <div class="card mt-3">
+        <div class="row no-gutters align-items-center">
+          <div class="col-md-4 col-lg-5 col-xl-4">
+            <img src="img/pineapplenegroni.jpg" class="card-img img-fluid" alt="...">
+          </div>
+          <div class="col">
+            <div class="card-body text-lg-left">
+              <div class="card-title mb-0"><strong>Scorched Pineapple Negroni</strong></div>
+              <div class="card-text">
+                <small>Pineapple-infused Campari, Cynar, Mezcal, Pineapple Oil, Palo Santo</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-3">
+        <div class="row no-gutters align-items-center">
+          <div class="col-md-4 col-lg-5 col-xl-4">
+            <img src="img/negroniandtonic.jpg" class="card-img img-fluid" alt="...">
+          </div>
+          <div class="col">
+            <div class="card-body text-lg-left">
+              <div class="card-title mb-0"><strong>Negroni & Tonic</strong></div>
+              <div class="card-text">
+                <small>Housemade Lemongrass Tonic, Gin, Cinzano Rosso, Campari</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-3">
+        <div class="row no-gutters align-items-center">
+          <div class="col-md-4 col-lg-5 col-xl-4">
+            <img src="img/bluenegroni.jpg" class="card-img img-fluid" alt="...">
+          </div>
+          <div class="col">
+            <div class="card-body text-lg-left">
+              <div class="card-title mb-0"><strong>Blue Negroni (AKA <cite>The Third Sink</cite>)</strong></div>
+              <div class="card-text">
+                <small>Aromatized Blue Curaçao, Gin, Lychee Luxardo Bitters, Campari spray</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="merch">
+  <div class="row">
+    <div class="col">
+      <div class="space"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center mb-3 mt-2">
+      <h2>MERCH</h4>
+      <h4>Trucker hats and sweet Tees available now!</h4>
+      <small><a class="misc-links" href="https://www.smokepgh.com/s/order?location=11eab7199b39ff8185260cc47a2b63ac#22" target="_blank">&#187 ORDER HERE</a></small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mt-3">
+        <img src="img/hats1.jpeg" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Smoke Trucker Hat</h5>
+          <p class="card-text">One size fits most - Snapbacks</p>
+          <small>$18.00</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mt-3">
+        <img src="img/shirts1.jpeg" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">"Enjoy Smoke" Short Sleeve</h5>
+          <p class="card-text">(50 Poly / 25 Cotton /25 Rayon)</p>
+          <small>$16.00</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mt-3">
+        <img src="img/shirts2.jpeg" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Smoke Beach Ringer Tee</h5>
+          <p class="card-text">(50 Poly / 25 Cotton /25 Rayon)</p>
+          <small>$16.00</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="space"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      
+    </div>
+  </div>
+
 </div>
 
 <div class="container">
@@ -290,11 +468,11 @@
             </div>
           </div>
           <form class="catered-event hidden">
-            <button type="button" class="close" id="catered-choice" aria-label="Close">
+            <button type="button" class="close" id="cateredClose" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
             <h5 class="mb-4 mb-md-0">Catering</h5>
-            <div class="text-center"><a href="/img/CateringMenu.pdf" download class="menu-link pt-1 pb-2 px-2 rounded-pill">Catering Menu</a></div>
+            <div class="text-center mb-3"><a href="/img/CateringMenu.pdf" download class="menu-link pt-1 pb-2 px-2 rounded-pill">Catering Menu</a></div>
             <div class="form-group row">
               <div class="col-md-6">
                 <small class="hide">Name</small>
@@ -415,7 +593,7 @@
           </form>
 
           <form class="hosted-event hidden">
-            <button type="button" class="close" id="hosted-choice" aria-label="Close">
+            <button type="button" class="close" id="hostedClose" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
             <h5>Hosted Event</h5>
@@ -488,7 +666,7 @@
                   <option>Noon</option>
                   <option>12:30PM</option>
                   <option>1:00PM</option>
-                  <option>1:30Pm</option>
+                  <option>1:30PM</option>
                   <option>2:00PM</option>
                   <option>2:30PM</option>
                   <option>3:00PM</option>
@@ -513,7 +691,7 @@
                 <select class="form-control" id="hostedEndTime">
                   <Option selected disabled>End Time</Option>
                   <option>1:00PM</option>
-                  <option>1:30Pm</option>
+                  <option>1:30PM</option>
                   <option>2:00PM</option>
                   <option>2:30PM</option>
                   <option>3:00PM</option>
@@ -633,7 +811,7 @@
       <div class="modal-body">
         <div class="container-fluid">
           <form>
-            <div class="form-group row mb-md-3 mb-0">
+            <div class="form-group row">
               <div class="col-md-6">
                 <small class="hide">Name</small>
                 <input type="text" class="form-control" id="careersName" placeholder="Name">                
