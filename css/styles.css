@@ -8,6 +8,7 @@ body {
 .card {
   background-image: url('/img/woodtex2.jpg');
   color: black;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .navbar, .site-footer {
@@ -35,6 +36,10 @@ body {
   box-shadow: none !important;
 }
 
+.form-control {
+  border: dashed black 3px;
+}
+
 select {
   padding-top: .15rem !important;
 }
@@ -53,7 +58,9 @@ select {
 }
 
 .nav-link, .btn-social-icon {
-  color: rgb(0, 0, 0) !important;
+  /* color: rgb(0, 0, 0) !important; */
+  color: black !important;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   text-transform: uppercase;
 }
 
@@ -63,7 +70,25 @@ select {
 
 .menu-link {
   color: black;
-  border: solid black 2px;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  border: solid black 3px;
+}
+
+.shop-modal-link {
+  color: black;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.shop-modal-link:hover {
+  text-decoration: none;
+  color: black;
+  border: solid black 3px;
+}
+
+.shop-img {
+  height: 20rem;
+  width: auto;
+  border: solid black 3px;
 }
 
 .menu-link:hover {
@@ -89,6 +114,7 @@ select {
 .modal-content, .close {
   background-image: url('/img/woodtex2.jpg');
   color: black !important;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 small.hide {
@@ -99,6 +125,7 @@ small.hide {
 .btn-submit {
   border: solid black;
   color: black;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   min-width: 10rem;
 }
 
@@ -152,6 +179,10 @@ small.hide {
   background-image: url(/img/firecloseup.jpg);
   background-size: cover;
   height: 83vh;
+}
+
+input, select {
+  color: black !important;
 }
 
 

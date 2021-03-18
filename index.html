@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse" id="nucampNavbar">
             <ul class="navbar-nav ml-auto text-center">
                 <li class="nav-item px-3"><a class="nav-link" id="aboutLink" href="#about">About</a></li>
-                <li class="nav-item px-3"><a class="nav-link" id="menusLink" href="#menus">Menus</a></li>
+                <li class="nav-item px-3"><a class="nav-link" id="featuresLink" href="#features">Features</a></li>
                 <li class="nav-item px-3"><a class="nav-link" id="reservationsLink" data-toggle="modal" data-target="#reservationModal" href="#">Reservations</a></li>
                 <li class="nav-item px-3"><a class="nav-link" id="eventsLink" data-toggle="modal" data-target="#eventsModal" href="#">Events</a></li>
                 <li class="nav-item px-3"><a class="nav-link" id="merchLink" href="#merch">Merch</a></li>  
@@ -102,7 +102,7 @@
   </div>   
 </div>
 
-<div class="container" id="menus">
+<div class="container" id="features">
   <div class="row">
     <div class="col">
       <div class="space"></div>
@@ -260,38 +260,43 @@
     <div class="col-12 text-center mb-3 mt-2">
       <h2>MERCH</h4>
       <h4>Trucker hats and sweet Tees available now!</h4>
-      <small><a class="misc-links" href="https://www.smokepgh.com/s/order?location=11eab7199b39ff8185260cc47a2b63ac#22" target="_blank">&#187 ORDER HERE</a></small>
     </div>
   </div>
   <div class="row">
     <div class="col-md-4">
       <div class="card mt-3">
-        <img src="img/hats1.jpeg" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">Smoke Trucker Hat</h5>
-          <p class="card-text">One size fits most - Snapbacks</p>
-          <small>$18.00</small>
-        </div>
+        <a class="shop-modal-link" data-toggle="modal" data-target="#shopModal" data-type="hat" href="#">
+          <img src="img/hats1.jpeg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Smoke Trucker Hat</h5>
+            <p class="card-text">One size fits most - Snapbacks</p>
+            <small>$18.00</small>
+          </div>
+        </a>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card mt-3">
-        <img src="img/shirts1.jpeg" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">"Enjoy Smoke" Short Sleeve</h5>
-          <p class="card-text">(50 Poly / 25 Cotton /25 Rayon)</p>
-          <small>$16.00</small>
-        </div>
+        <a class="shop-modal-link" data-toggle="modal" data-target="#shopModal" data-type="shirt" href="#">
+          <img src="img/shirts1.jpg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">"Enjoy Smoke" Short Sleeve</h5>
+            <p class="card-text">(50 Poly / 25 Cotton /25 Rayon)</p>
+            <small>$16.00</small>
+          </div>
+        </a>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card mt-3">
-        <img src="img/shirts2.jpeg" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">Smoke Beach Ringer Tee</h5>
-          <p class="card-text">(50 Poly / 25 Cotton /25 Rayon)</p>
-          <small>$16.00</small>
-        </div>
+        <a class="shop-modal-link" data-toggle="modal" data-target="#shopModal" data-type="shirt" href="#">
+          <img src="img/shirts2.jpeg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Smoke Beach Ringer Tee</h5>
+            <p class="card-text">(50 Poly / 25 Cotton /25 Rayon)</p>
+            <small>$16.00</small>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -304,8 +309,84 @@
 
   <div class="row">
     <div class="col">
-      
     </div>
+  </div>
+
+  <div class="modal fade" id="shopModal" tabindex="-1" aria-labelledby="shopModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="shopModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row text-center">
+              <div class="col-12 mb-2">
+                <cite>We are not currently shipping merch.
+                  <br>
+                  All purchases must be picked up in store.
+                </cite>  
+              </div>
+              <div class="col-12 mb-2" id="modalImage">                             
+              </div>
+            </div>
+            <form>
+              <div class="form-group row">
+                <div class="col-md-6 mx-auto">
+                  <div>Select Quantity</div>
+                  <input id="shopQuantity" class="form-control" type="number" placeholder="0" min="0" max="6" required>
+                </div>
+                <div class="col-md-6 shirt-sizes">
+                  <div>Select Size</div>
+                  <select id="shopSize" class="form-control" required>
+                    <option value="" selected disabled>Select Size</option>
+                    <option value="MS">Men's S</option>
+                    <option value="MM" disabled>Men's M</option>
+                    <option value="ML">Men's L</option>
+                    <option value="MXL">Men's XL</option>
+                    <option value="WS" disabled>Women's S</option>
+                    <option value="WM">Women's M</option>
+                    <option value="WL">Women's L</option>
+                    <option value="WXL">Women's XL</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <div>Name</div>
+                  <input class="form-control" type="text" id="shopName" placeholder="Name" required>
+                </div>
+                <div class="col-md-6">
+                  <div>Phone Number</div>
+                  <input class="form-control" type="tel" id="shopNum" placeholder="Phone Number" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <div>Date of Pickup</div>
+                  <input type="date" class="form-control" id="shopDate" required>
+                </div>
+                <div class="col-md-6 text-center">
+                  <div class="mt-2">
+                    <p class="m-0">Total w/ Tax</p>
+                    <p class="m-0 total-cost"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row mt-3">
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-submit"> Submit </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </div>
