@@ -102,8 +102,9 @@ function hostedEvent() {
 // close collapsed menu and resets button when selection is made
 $('.navbar-nav>li>a, .dropdown-item').on('click', function(){
   $('.navbar-collapse').collapse('hide');
-  $(".bars").toggleClass("hidden");
-  $(".close-icon").toggleClass("hidden");
+  if ($(".bars").hasClass("hidden"))
+  {$(".bars").toggleClass("hidden");}
+  $(".close-icon").addClass("hidden");
 });
 
 // first clear form function - doesn't work on modal close -- jquery thing?
