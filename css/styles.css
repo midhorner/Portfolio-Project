@@ -27,11 +27,12 @@ body {
 
 .dropdown-menu {
   padding: .5rem;
-  background-image: url('/img/woodtex2.jpg');
+  background-color: rgba(224, 224, 224, 0);
+  border: none !important;
 }
 
 .dropdown-item:hover {
-  background-image: url('/img/woodtex2.jpg');
+  background-color: rgba(224, 224, 224, 0);
 }
 
 .form-control {
@@ -134,7 +135,7 @@ input, select {
 }
 
 .order-links {
-  padding: .5rem;
+  padding: .5rem 2rem;
   border-radius: .25rem;
   color: black !important;
   border: solid black 3px;
@@ -193,6 +194,10 @@ small.hide {
   background-image: url(/img/firecloseup.jpg);
   background-size: cover;
   height: 83vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .toggler-bar {
@@ -207,5 +212,11 @@ small.hide {
 @media only screen and (max-width: 360px) {
   #smoke-logo {
     height: 85px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .dropdown-menu {
+    background-image: url('/img/woodtex2.jpg');
   }
 }

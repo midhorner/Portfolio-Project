@@ -4,6 +4,7 @@ $(function(){
     $(".bars").toggleClass("hidden");
     $(".close-icon").toggleClass("hidden");
   });
+
   // reveals form labels on focus
   $('.form-group :input')
   .on("focus", function() {
@@ -49,12 +50,14 @@ $(function(){
     modal.find('.modal-title').text(title);
     if (type !== 'shirt') {
       modal.find('.shirt-sizes').addClass('hidden');
+      modal.find('.hat-styles').removeClass('hidden');
       $('#shopQuantity').on('click', function() {
         let quantity = $('#shopQuantity').val();
         $('.total-cost').html(`$${((quantity * 18.00) * 1.07).toFixed(2)}`);
       })
     } else {
       modal.find('.shirt-sizes').removeClass('hidden');
+      modal.find('.hat-styles').addClass('hidden');
       $('#shopQuantity').on('click', function() {
         let quantity = $('#shopQuantity').val();
         $('.total-cost').html(`$${((quantity * 16.00) * 1.07).toFixed(2)}`);
@@ -95,6 +98,13 @@ function hostedEvent() {
   $(".hosted-event").toggleClass("hidden");
   $("#typeOfEvent").toggleClass("hidden");
 }
+
+// close collapsed menu and resets button when selection is made
+$('.navbar-nav>li>a, .dropdown-item').on('click', function(){
+  $('.navbar-collapse').collapse('hide');
+  $(".bars").toggleClass("hidden");
+  $(".close-icon").toggleClass("hidden");
+});
 
 // first clear form function - doesn't work on modal close -- jquery thing?
 // function clearForms() {

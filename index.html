@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
   <link rel="stylesheet" href="css/styles.css" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600&display=swap" rel="stylesheet">
 
   <title>Smoke Pittsburgh</title>
 </head>
@@ -40,7 +40,7 @@
                 <li class="nav-item px-3"><a class="nav-link" id="aboutLink" href="#about">About</a></li>
                 <div class="nav-item px-3 dropdown">
                   <a class="nav-link dropdown-toggle" id="featuresLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Features</a>
-                  <div class="dropdown-menu" aria-labelledby="featuresLink">
+                  <div class="dropdown-menu text-center" aria-labelledby="featuresLink">
                     <a class="nav-link dropdown-item" href="#tacos">Tacos</a>
                     <a class="nav-link dropdown-item" href="#cocktails">Cocktails</a>
                   </div>
@@ -49,7 +49,7 @@
                 <li class="nav-item px-3"><a class="nav-link" id="eventsLink" data-toggle="modal" data-target="#eventsModal" href="#">Events</a></li>
                 <div class="nav-item px-3 dropdown">
                   <a class="nav-link dropdown-toggle" id="merchLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Merch</a>
-                  <div class="dropdown-menu" aria-labelledby="featuresLink">
+                  <div class="dropdown-menu text-center" aria-labelledby="featuresLink">
                     <a class="nav-link dropdown-item" href="#apparel">Apparel</a>
                     <a class="nav-link dropdown-item" href="#giftCards">Gift Cards</a>
                   </div>
@@ -273,7 +273,7 @@
 
   <div class="row">
     <div class="col-12 text-center mb-3 mt-2">
-      <h2>MERCH</h4>
+      <h2>Apparel</h4>
       <h4>Trucker hats and sweet Tees available now!</h4>
     </div>
   </div>
@@ -327,7 +327,7 @@
       <h2>Gift Cards</h4>
       <small><a class="misc-links" href="https://squareup.com/gift/ZKMT9ZH3D7004/order" target="_blank">&#187 ORDER HERE</a></small>
       <p class="mt-2">Thanks to everyone who purchased gift cards during our last promotion!
-      <br>Be cause of you the new tortilla machine is up and running!</p>
+      <br>Because of you the new tortilla machine is up and running!</p>
     </div>
   </div>
   <div class="row text-center">
@@ -338,6 +338,8 @@
       <img src="/img/gc2.png" class="img-fluid rounded">
     </div>
   </div>
+
+  <!-- SHOP MODAL -->
 
   <div class="modal fade" id="shopModal" tabindex="-1" aria-labelledby="shopModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -365,6 +367,20 @@
                 <div class="col-md-6 mx-auto">
                   <div>Select Quantity</div>
                   <input id="shopQuantity" class="form-control" type="number" placeholder="0" min="0" max="6" required>
+                </div>
+                <div class="col-md-6 hat-styles">
+                  <div>Select Style</div>
+                  <select id="shopSize" class="form-control" required>
+                    <option value="" selected disabled>Select Style</option>
+                    <option value="PB/W">Powder Blue/White</option>
+                    <option value="T/W" disabled>Teal/White</option>
+                    <option value="NB/W">Navy Blue/White</option>
+                    <option value="B/W" disabled>Black/White</option>
+                    <option value="O/T">Orange/Tan</option>                    
+                    <option value="B/B">Black/Black</option>
+                    <option value="R/B">Red/Black</option>
+                    <option value="G/B">Gray/Black</option>
+                  </select>
                 </div>
                 <div class="col-md-6 shirt-sizes">
                   <div>Select Size</div>
