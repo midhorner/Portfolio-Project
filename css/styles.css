@@ -1,8 +1,22 @@
 body {
   font-family: 'Shippori Mincho B1', serif;
-  /* background-image: url('/img/woodtex2.jpg');
-  background-size: auto; */
   background-color: rgb(224, 224, 224);
+}
+
+.btn-submit {
+  border: solid black;
+  color: black;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  min-width: 10rem;
+}
+
+.btn-submit:active {
+  transform: scale(.98);
+}
+
+.btn-submit:hover {
+  background-color: black;
+  color: rgb(224, 224, 224);
 }
 
 .card {
@@ -11,9 +25,85 @@ body {
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
+.dropdown-menu {
+  padding: .5rem;
+  background-image: url('/img/woodtex2.jpg');
+}
+
+.dropdown-item:hover {
+  background-image: url('/img/woodtex2.jpg');
+}
+
+.form-control {
+  border: dashed black 3px;
+}
+
+.form-control:focus, 
+.form-control:active:focus,
+.form-control.active:focus {
+  border: solid black 3px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-group.row {
+  margin-bottom: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.img-fluid.rounded {
+  border: solid black 2px;
+  height: 15rem;
+  width: auto;
+}
+
+input, select {
+  color: black !important;
+}
+
+.menu-link {
+  color: black;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  border: solid black 3px;
+}
+
+.menu-link:hover {
+  text-decoration: none;
+  background-color: black;
+  color: rgb(224, 224, 224);
+}
+
+.misc-links {
+  color: #4271a0;
+  border-bottom: solid #4271a0 1px;
+}
+
+.misc-links:hover {
+  text-decoration: none;
+  color: #3c5772;
+  border-bottom: solid #3c5772 1px;
+}
+
+.modal-content, .close {
+  background-image: url('/img/woodtex2.jpg');
+  color: black !important;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.modal-header {
+  border-bottom: solid black 2px;
+}
+
 .navbar, .site-footer {
   background-image: url('/img/woodtex2.jpg');
   background-size: cover;
+}
+
+.navbar-collapse.collapsing #order-online, .navbar-collapse.show #order-online {
+  border: none;
 }
 
 .navbar-toggler:focus, 
@@ -28,37 +118,12 @@ body {
   box-shadow:none;
 }
 
-.form-control:focus, 
-.form-control:active:focus,
-.form-control.active:focus {
-  border: solid black 3px !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-.form-control {
-  border: dashed black 3px;
-}
-
-select {
-  padding-top: .15rem !important;
-}
-
-.navbar-collapse.collapsing #order-online, .navbar-collapse.show #order-online {
-  border: none;
-}
-
-.hidden {
-  display: none;
-}
-
 .navbar-toggler {
   border: solid black 2px !important;
   color: black !important;
 }
 
 .nav-link, .btn-social-icon {
-  /* color: rgb(0, 0, 0) !important; */
   color: black !important;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   text-transform: uppercase;
@@ -68,10 +133,33 @@ select {
   color: rgb(205, 212, 188) !important;
 }
 
-.menu-link {
-  color: black;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+.order-links {
+  padding: .5rem;
+  border-radius: .25rem;
+  color: black !important;
   border: solid black 3px;
+}
+
+.order-links:hover {
+  text-decoration: none;
+  color: rgb(224, 224, 224) !important;
+  background-color: black;
+}
+
+#orderOnline {
+  border: solid black 3px;
+  color: black !important;
+  border-radius: .25rem;
+  width: fit-content;
+}
+
+#orderOnline:hover {
+  background-color: black;
+  color: rgb(224, 224, 224) !important;
+}
+
+select {
+  padding-top: .15rem !important;
 }
 
 .shop-modal-link {
@@ -91,83 +179,9 @@ select {
   border: solid black 3px;
 }
 
-.menu-link:hover {
-  text-decoration: none;
-  background-color: black;
-  color: rgb(224, 224, 224);
-}
-
-.toggler-bar {
-  display: block;
-  width: 16px;
-  height: 2px;
-  margin: .35rem 0; 
-  background: black;
-  border-radius: 3px;
-  
-}
-
-.modal-header {
-  border-bottom: solid black 2px;
-}
-
-.modal-content, .close {
-  background-image: url('/img/woodtex2.jpg');
-  color: black !important;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-}
-
 small.hide {
   opacity: 0;
   pointer-events: none;
-}
-
-.btn-submit {
-  border: solid black;
-  color: black;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-  min-width: 10rem;
-}
-
-.btn-submit:hover {
-  background-color: black;
-  color: rgb(224, 224, 224);
-}
-
-.btn-submit:active {
-  transform: scale(.98);
-}
-
-.form-group.row {
-  margin-bottom: 0;
-}
-
-#orderOnline {
-  border: solid black 3px;
-  color: black !important;
-  border-radius: .25rem;
-  width: fit-content;
-}
-
-#orderOnline:hover {
-  background-color: black;
-  color: rgb(224, 224, 224) !important;
-}
-
-.misc-links {
-  color: #4271a0;
-  border-bottom: solid #4271a0 1px;
-}
-
-.misc-links:hover {
-  text-decoration: none;
-  color: #3c5772;
-  border-bottom: solid #3c5772 1px;
-}
-
-.clear {
-  clear: both;
-  height: 100px;
 }
 
 .space {
@@ -181,10 +195,14 @@ small.hide {
   height: 83vh;
 }
 
-input, select {
-  color: black !important;
+.toggler-bar {
+  display: block;
+  width: 16px;
+  height: 2px;
+  margin: .35rem 0; 
+  background: black;
+  border-radius: 3px;  
 }
-
 
 @media only screen and (max-width: 360px) {
   #smoke-logo {
