@@ -5,6 +5,13 @@ $(function(){
     $(".close-icon").toggleClass("hidden");
   });
 
+  // close collapsed menu and resets button when selection is made
+$('.navbar-nav>li>a, .dropdown-item').on('click', function(){
+  $('.navbar-collapse').collapse('hide');
+  $(".bars").removeClass("hidden");
+  $(".close-icon").addClass("hidden");
+});
+
   // reveals form labels on focus
   $('.form-group :input')
   .on("focus", function() {
@@ -78,10 +85,11 @@ $(function(){
     $('#hostedStartTime').val($('#hostedStartTime option:first').val());
     $('#hostedEndTime').val($('#hostedEndTime option:first').val());
     $('#careersPosition').val($('#careersPosition option:first').val());
-    if ($("#eventsButtons").hasClass("hidden")) { $("#eventsButtons").removeClass("hidden"); }
-    if ($("#typeOfEvent").hasClass("hidden")) { $("#typeOfEvent").removeClass("hidden"); }
-    if (!$(".catered-event").hasClass("hidden")) { $(".catered-event").addClass("hidden"); }
-    if (!$(".hosted-event").hasClass("hidden")) { $(".hosted-event").addClass("hidden"); }
+    $("#eventsButtons").removeClass("hidden");
+    $("#typeOfEvent").removeClass("hidden");
+    $("#cateringNeeds").addClass("hidden");
+    $(".catered-event").addClass("hidden");
+    $(".hosted-event").addClass("hidden");
   });
 
 });
@@ -98,14 +106,6 @@ function hostedEvent() {
   $(".hosted-event").toggleClass("hidden");
   $("#typeOfEvent").toggleClass("hidden");
 }
-
-// close collapsed menu and resets button when selection is made
-$('.navbar-nav>li>a, .dropdown-item').on('click', function(){
-  $('.navbar-collapse').collapse('hide');
-  if ($(".bars").hasClass("hidden"))
-  {$(".bars").toggleClass("hidden");}
-  $(".close-icon").addClass("hidden");
-});
 
 // first clear form function - doesn't work on modal close -- jquery thing?
 // function clearForms() {

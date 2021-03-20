@@ -1,6 +1,6 @@
 body {
   font-family: 'Shippori Mincho B1', serif;
-  background-color: rgb(224, 224, 224);
+  background-color: whitesmoke;
 }
 
 .btn-submit {
@@ -16,23 +16,27 @@ body {
 
 .btn-submit:hover {
   background-color: black;
-  color: rgb(224, 224, 224);
+  color: whitesmoke;
 }
 
 .card {
   background-image: url('/img/woodtex2.jpg');
   color: black;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  text-shadow: 1px 0 0 black, 0 -1px 0 black, 0 1px 0 black, -1px 0 0 black;
 }
 
 .dropdown-menu {
   padding: .5rem;
-  background-color: rgba(224, 224, 224, 0);
+  background-color: rgba(1, 1, 1, 0);
   border: none !important;
 }
 
+/* .dropdown.show > .dropdown-toggle {
+  border-bottom: solid black 2px;
+} */
+
 .dropdown-item:hover {
-  background-color: rgba(224, 224, 224, 0);
+  background-color: rgba(1, 1, 1, 0);
 }
 
 .form-control {
@@ -67,14 +71,14 @@ input, select {
 
 .menu-link {
   color: black;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  text-shadow: 1px 0 0 black, 0 -1px 0 black, 0 1px 0 black, -1px 0 0 black;
   border: solid black 3px;
 }
 
 .menu-link:hover {
   text-decoration: none;
   background-color: black;
-  color: rgb(224, 224, 224);
+  color: whitesmoke;
 }
 
 .misc-links {
@@ -91,7 +95,7 @@ input, select {
 .modal-content, .close {
   background-image: url('/img/woodtex2.jpg');
   color: black !important;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  text-shadow: 1px 0 0 black, 0 -1px 0 black, 0 1px 0 black, -1px 0 0 black;
 }
 
 .modal-header {
@@ -126,12 +130,13 @@ input, select {
 
 .nav-link, .btn-social-icon {
   color: black !important;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  text-shadow: 1px 0 0 black, 0 -1px 0 black, 0 1px 0 black, -1px 0 0 black;
   text-transform: uppercase;
 }
 
 .nav-link:hover, .btn-social-icon:hover {
-  color: rgb(205, 212, 188) !important;
+  color:rgb(56, 56, 56) !important;
+  text-shadow: 1px 0 0 darkslategray, 0 -1px 0 darkslategray, 0 1px 0 darkslategray, -1px 0 0 darkslategray;
 }
 
 .order-links {
@@ -143,7 +148,7 @@ input, select {
 
 .order-links:hover {
   text-decoration: none;
-  color: rgb(224, 224, 224) !important;
+  color: whitesmoke !important;
   background-color: black;
 }
 
@@ -156,7 +161,7 @@ input, select {
 
 #orderOnline:hover {
   background-color: black;
-  color: rgb(224, 224, 224) !important;
+  color: whitesmoke !important;
 }
 
 select {
@@ -165,7 +170,7 @@ select {
 
 .shop-modal-link {
   color: black;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  text-shadow: 1px 0 0 black, 0 -1px 0 black, 0 1px 0 black, -1px 0 0 black;
 }
 
 .shop-modal-link:hover {
