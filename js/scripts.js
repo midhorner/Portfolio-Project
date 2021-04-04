@@ -6,11 +6,11 @@ $(function(){
   });
 
   // close collapsed menu and resets button when selection is made
-$('.navbar-nav>li>a, .dropdown-item').on('click', function(){
-  $('.navbar-collapse').collapse('hide');
-  $(".bars").removeClass("hidden");
-  $(".close-icon").addClass("hidden");
-});
+  $('.navbar-nav>li>a, .dropdown-item').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+    $(".bars").removeClass("hidden");
+    $(".close-icon").addClass("hidden");
+  });
 
   // reveals form labels on focus
   $('.form-group :input')
