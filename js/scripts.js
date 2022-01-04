@@ -28,17 +28,17 @@ $(function(){
   $("#hostedClose").on("click", hostedEvent);
 
   // reveals/hides party size warning & checkboxes depending on selection
-  $('input[name="rentingRadios"]').on("click", function(){
-    let radioValue = $('input[name="rentingRadios"]:checked').val();
-    if (radioValue === "yes") {
+  $("input[name='rentingRadios']").on("click", function(){
+    var rV = $("input[name='rentingRadios']:checked").val();
+    if (rV === "yes") {
       $(".size-warning").removeClass("hidden");
     } else {
       $(".size-warning").addClass("hidden");
     }
   });
-  $('input[name="cateringRadios"]').on("click", function(){
-    let radioValue = $('input[name="cateringRadios"]:checked').val();
-    if (radioValue === "on-site") {
+  $("input[name='cateringRadios']").on("click", function(){
+    var rV = $("input[name='cateringRadios']:checked").val();
+    if (rV === "on-site") {
       $("#cateringNeeds").removeClass("hidden");
     } else {
       $("#cateringNeeds").addClass("hidden");
@@ -49,25 +49,25 @@ $(function(){
   // pulls the necessary info from whichever card is selected
   $('#shopModal').on('show.bs.modal', function (event) {
     const trigger = $(event.relatedTarget);
-    let type = trigger.data('type');
-    let imageSource = trigger.find('img').attr('src');
-    let title = trigger.find('.card-title').text();
+    var type = trigger.data('type');
+    var imageSource = trigger.find('img').attr('src');
+    var title = trigger.find('.card-title').text();
     const modal = $(this);
-    modal.find('#modalImage').html(`<img src="${imageSource}" class="shop-img img-fluid"></img`);
+    modal.find('#modalImage').html('<img src=' + imageSource + ' class=shop-img img-fluid></img');
     modal.find('.modal-title').text(title);
     if (type !== 'shirt') {
       modal.find('.shirt-sizes').addClass('hidden');
       modal.find('.hat-styles').removeClass('hidden');
       $('#shopQuantity').on('click', function() {
-        let quantity = $('#shopQuantity').val();
-        $('.total-cost').html(`$${((quantity * 18.00) * 1.07).toFixed(2)}`);
+        var quantity = $('#shopQuantity').val();
+        $('.total-cost').html('$' + ((quantity * 18.00) * 1.07).toFixed(2));
       })
     } else {
       modal.find('.shirt-sizes').removeClass('hidden');
       modal.find('.hat-styles').addClass('hidden');
       $('#shopQuantity').on('click', function() {
-        let quantity = $('#shopQuantity').val();
-        $('.total-cost').html(`$${((quantity * 16.00) * 1.07).toFixed(2)}`);
+        var quantity = $('#shopQuantity').val();
+        $('.total-cost').html('$' + ((quantity * 16.00) * 1.07).toFixed(2));
       })
     }
   });
